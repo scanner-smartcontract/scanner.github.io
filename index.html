@@ -3,24 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Token Analyzer</title>
+    <title>Smart Contract Analyzer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Crypto Token Analyzer</h1>
-    <p>Check if a token is a scam, honeypot, or rugpull.</p>
-    
-    <label for="blockchain">Select Blockchain:</label>
-    <select id="blockchain">
-        <option value="ethereum">Ethereum</option>
-        <option value="bsc">Binance Smart Chain</option>
-        <option value="polygon">Polygon</option>
-    </select>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+            <span>Smart Contract Analyzer</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <input type="text" id="contractAddress" placeholder="Enter contract address">
-    <button onclick="analyzeToken()">Analyze</button>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Analyze Smart Contracts for Security Risks</h1>
+            <p>Detect vulnerabilities, scams, and honeypots in smart contracts across multiple blockchains.</p>
+            <div class="search-bar">
+                <input type="text" id="contractAddress" placeholder="Enter contract address">
+                <select id="blockchain">
+                    <option value="ethereum">Ethereum</option>
+                    <option value="bsc">Binance Smart Chain</option>
+                    <option value="polygon">Polygon</option>
+                </select>
+                <button onclick="analyzeToken()">Analyze</button>
+            </div>
+        </div>
+    </section>
 
-    <pre id="result"></pre>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security Analysis</h3>
+                <p>Detect vulnerabilities and potential risks in smart contracts.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-search"></i>
+                <h3>Scam Detection</h3>
+                <p>Identify scams, honeypots, and rug pulls.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Multi-Blockchain</h3>
+                <p>Supports Ethereum, Binance Smart Chain, and Polygon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <span>1</span>
+                <p>Enter the contract address and select the blockchain.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <p>Our system analyzes the contract for vulnerabilities and risks.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <p>Get a detailed report with actionable insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Smart Contract Analyzer. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
